@@ -9,6 +9,8 @@ export default defineConfig({
   outDir: "../public",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: "../../assets/icon.png",
+    siteTitle: "Magic for Zotero",
     nav: [
       { text: '首页', link: '/' },
       { text: '使用文档', link: '/wiki/' }
@@ -59,6 +61,13 @@ export default defineConfig({
         
     }
 
+  },
+  lastUpdated: {
+    text: 'Updated at',
+    formatOptions: {
+      dateStyle: 'full',
+      timeStyle: 'medium'
+    }
   },
   vite:{
     plugins:[pagefindPlugin({

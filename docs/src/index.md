@@ -6,6 +6,9 @@ hero:
   name: "Magic for Zotero"
   text: "一个神奇的Zotero插件"
   tagline: 
+  image:
+    src: ../../assets/icon.svg
+    alt: Magic for Zotero
   actions:
     - theme: brand
       text: Markdown Examples
