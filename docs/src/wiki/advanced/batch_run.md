@@ -4,6 +4,9 @@
 该功能需要依赖 Zotero Tag & Action 插件，可到[Zotero 中文社区插件商店](https://plugins.zotero-chinese.com/#/)下载
 :::
 
+Action 插件中动作设置页面
+
+![Action动作编辑设置](../../assets/image_action_setting.png)
 
 ## 批量进行Outline Summary 总结
 
