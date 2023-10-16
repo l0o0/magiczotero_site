@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { pagefindPlugin, chineseSearchOptimize } from 'vitepress-plugin-pagefind'
+import implicitFigures from 'markdown-it-implicit-figures'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -78,5 +79,13 @@ export default defineConfig({
         customSearchQuery: chineseSearchOptimize,
         indexingCommand: "npx pagefind --site build --exclude-selectors \"div.aside, a.header-anchor\""
       })],
+  },
+  markdown: {
+    config: (md) => {
+      md.use(implicitFigures, {
+        figcaption: true,
+        copyAttrs: '^class$'
+      })
+    }
   }
 })

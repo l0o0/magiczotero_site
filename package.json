@@ -8,6 +8,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
+    "markdown-it-implicit-figures": "^0.12.0",
     "pagefind": "^1.0.3",
     "vitepress-plugin-pagefind": "^0.2.10"
   }
