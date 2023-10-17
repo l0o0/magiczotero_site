@@ -33,7 +33,7 @@ export default defineConfig({
       {
         text: "高级使用",
         items: [
-            { text: "批量进行翻译与全文总结", link: "/wiki/advanced/batch_run" }
+            
         ]
       },
       {

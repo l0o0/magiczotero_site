@@ -52,22 +52,9 @@ GPT 参数需要在 Zotero GPT 插件中进行设置，设置办法也是依照�
 ### 研究领域关键词设置
 根据自己研究领域，在文献总结模板中更新关键词列表，可以提升 GPT 总结质量。
 
-在模板编辑器中，选择左侧的`[text] Paper Summary`模板进行编辑，在编辑窗口找到下面这段，修改高亮那一行中`气溶胶遥感、气溶胶反演`为自己需要的关键词
+可以打开 Magic Zotero 的设置页面，在研究领域外，填写你目前关注的研究领域
 
-```js
-sharedObj.setGPTSystemMsg = () => {
-	const window = Zotero.getMainWindow()
-	window.Meet.Global.views.messages = [
-		{
-			"role": "system",
-			// ✍️可修改[气溶胶遥感、气溶胶反演]为[你的专业领域关键词1、你的专业领域关键词2]
-			"content": "You are a researcher in the field of [气溶胶遥感、气溶胶反演] who ..." // [!code error]
-		}
-	]
-}
-```
-
-![模板中关键词修改](../../assets/image_template_keywords.png)
+![更新GPT全文总结关注的研究领域](../../assets/image_template_keywords.png)
 
 可以设置多个研究领域关键词，中英文均可。
 
@@ -75,6 +62,9 @@ sharedObj.setGPTSystemMsg = () => {
 
 文献大纲的识别和拆分需要依赖关键单词，用于区分文献的前言，背景，方法，数据，总结，结论，讨论，结果等内容区域。这部分是可选内容，如果 GPT 总结失败，可查看论文标题大纲标题是否与模板中设定一致。
 
+::: info
+设置之后可能会提升 GPT 总结的质量，使用默认设置也能获取结果。
+:::
 
 ```javascript
 // 按照已有的格式，手动添加，注意引号与方括号
@@ -92,3 +82,34 @@ const sectionInfo = await sharedObj.getSectionInfo(["conclu", "conclusions","res
 如果你已经编辑好了适合自己的文献总结模板，建议先备份到本地。如果你重新点击上面的**Paper Summary**和**Outline Summary**，会覆盖原有的模板内容。
 :::
 
+
+## 使用 GPT 全文总结
+
+::: info
+在使用 GPT 全文总结之前，请一定确保设置了 GPT 接口并更新了相应的总结模板
+:::
+
+### 单篇文献的总结
+
+打开一篇英文文献的 PDF，在阅读窗口，点击右侧的笔记按钮，选择**条目笔记**窗口的 + 号，从模板新建条目子笔记
+
+![从模板新建条目子笔记](../../assets/image_chatpdf_add_summary_button.png)
+
+点击之后，会出现一个模板选择窗口，注意选择**Paper Summary**和**Outline Summary**中一个
+
+![选择总结模板](../../assets/image_chatpdf_template_select.png)
+
+在 Zotero GPT 窗口会自动对文献进行总结
+
+![GPT总结中](../../assets/image_chatpdf_gpt_prompt.png)
+
+最后会在条目下生成一个总结笔记，标题以 Magic Zotero 开头的。
+
+![GPT生成笔记](../../assets/image_chatpdf_gpt_note.png)
+
+### 多篇文献的总结
+
+
+::: tip
+如果你在使用中遇到了问题，可到[常见问题-文献总结](../faq/chatpdf)处查找，也可在售后群中咨询
+:::
