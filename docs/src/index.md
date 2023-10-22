@@ -15,7 +15,7 @@ hero:
       link: https://item.taobao.com/item.htm?spm=a21n57.1.0.0.42ac4130qdz7rj&id=735669457105&ns=1&abbucket=4#detail
     - theme: alt
       text: 📖使用文档
-      link: /wiki/
+      link: https://wiki.magiczotero.top/article/magic
 
 features:
   - title: 全文翻译

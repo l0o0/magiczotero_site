@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { pagefindPlugin, chineseSearchOptimize } from 'vitepress-plugin-pagefind'
+// import { pagefindPlugin, chineseSearchOptimize } from 'vitepress-plugin-pagefind'
 import implicitFigures from 'markdown-it-implicit-figures'
 
 // https://vitepress.dev/reference/site-config
@@ -14,7 +14,7 @@ export default defineConfig({
     siteTitle: "Magic for Zotero",
     nav: [
       { text: '首页', link: '/' },
-      { text: '使用文档', link: '/wiki/' }
+      { text: '使用文档', link: 'https://wiki.magiczotero.top/article/magic' }
     ],
 
     sidebar: [
@@ -70,16 +70,16 @@ export default defineConfig({
       timeStyle: 'medium'
     }
   },
-  vite:{
-    plugins:[pagefindPlugin({
-        btnPlaceholder: '搜索',
-        placeholder: '暂未开放',
-        emptyText: '空空如也',
-         heading: '共: {{searchResult}} 条结果',
-        customSearchQuery: chineseSearchOptimize,
-        indexingCommand: "npx pagefind --site build --exclude-selectors \"div.aside, a.header-anchor\""
-      })],
-  },
+//   vite:{
+//     plugins:[pagefindPlugin({
+//         btnPlaceholder: '搜索',
+//         placeholder: '暂未开放',
+//         emptyText: '空空如也',
+//          heading: '共: {{searchResult}} 条结果',
+//         customSearchQuery: chineseSearchOptimize,
+//         indexingCommand: "npx pagefind --site build --exclude-selectors \"div.aside, a.header-anchor\""
+//       })],
+//   },
   markdown: {
     config: (md) => {
       md.use(implicitFigures, {
