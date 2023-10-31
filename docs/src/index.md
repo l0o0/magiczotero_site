@@ -11,8 +11,8 @@ hero:
     alt: Magic for Zotero
   actions:
     - theme: brand
-      text: 🎁购买链接
-      link: https://item.taobao.com/item.htm?spm=a21n57.1.0.0.42ac4130qdz7rj&id=735669457105&ns=1&abbucket=4#detail
+      text: 🎁免费试用
+      link: https://ftp.magiczotero.top/zotero-magic-for-user.xpi
     - theme: alt
       text: 📖使用文档
       link: https://wiki.magiczotero.top/article/magic
