@@ -7,7 +7,7 @@ hero:
   text: "一个神奇的Zotero插件"
   tagline: 
   image:
-    src: /icon.png
+    src: /magic.svg
     alt: Magic for Zotero
   actions:
     - theme: brand
